@@ -5,14 +5,16 @@ import event1 from '../resource/event1.jpeg';
 import event2 from '../resource/event2.jpeg';
 import event3 from '../resource/event3.jpeg';
 import event4 from '../resource/event4.png';
+import UploadForm from './UploadForm';
 
 function Home() {
     const [display, setDisplay] = useState(true);
-
+    const [showForm, setShowForm] = useState(false)
+    const [eventName, setEventName] = useState("")
     return (
         <div className='home'>
             <StartDisplay display={display} setDisplay={setDisplay} />
-            {!display ? (
+            {!display && !showForm ? (
                 <>
                     <EventCard
                         eventImg={event1}
@@ -21,6 +23,8 @@ function Home() {
                             'Express your creativity on canvas in our thrilling painting competition where imagination meets artistry!'
                         }
                         number={"01"}
+                        setForm={setShowForm}
+                        setEventName={setEventName}
                     />
                     <EventCard
                         eventImg={event2}
@@ -29,14 +33,18 @@ function Home() {
                             'Join us for an exhilarating athletic competition where speed, strength, and skill converge in a test of champions.'
                         }
                         number={"02"}
+                        setForm={setShowForm}
+                        setEventName={setEventName}
                     />
                     <EventCard
                         eventImg={event3}
-                        eventName={'गीत स्पर्धा '}
+                        eventName={'गीत स्पर्धा'}
                         eventDescrtiption={
                             'Unleash your vocal prowess in our electrifying singing competition, where voices soar and talent shines!'
                         }
                         number={"03"}
+                        setForm={setShowForm}
+                        setEventName={setEventName}
                     />
                     <EventCard
                         eventImg={event4}
@@ -45,11 +53,14 @@ function Home() {
                             'Unleash your poetic talent in our poetic competition, where words flow beautifully and creativity knows no bounds!'
                         }
                         number={"04"}
+                        setForm={setShowForm}
+                        setEventName={setEventName}
                     />
                 </>
             ) : (
                 <></>
             )}
+            {showForm ? <UploadForm eventName={eventName} /> : <></>}
         </div>
     );
 }

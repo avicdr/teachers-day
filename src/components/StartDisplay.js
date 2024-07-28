@@ -17,7 +17,7 @@ function StartDisplay({setDisplay, display}) {
                 ]}
                 wrapper="div" // or any other suitable element
                 speed={50}
-                style={{ fontSize: '3em', display: 'inline-block' }}
+                style={{ fontSize: "2.8em", display: 'inline-block', textAlign: "center" }}
                 repeat={Infinity}
                 className='welcome my-5'
             />

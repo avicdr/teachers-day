@@ -1,0 +1,8 @@
+@media screen and (max-width: 400px) {
+    .card .content h2{
+        top: -100px !important;
+    }
+    .card{
+        width: 90% !important;
+    }
+}
