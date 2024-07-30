@@ -5,6 +5,7 @@ import event1 from '../resource/event1.jpeg';
 import event2 from '../resource/event2.jpeg';
 import event3 from '../resource/event3.jpeg';
 import event4 from '../resource/event4.png';
+import event5 from '../resource/event5.jpeg';
 import UploadForm from './UploadForm';
 
 function Home() {
@@ -35,6 +36,7 @@ function Home() {
                         number={"02"}
                         setForm={setShowForm}
                         setEventName={setEventName}
+                        know={true}
                     />
                     <EventCard
                         eventImg={event3}
@@ -53,6 +55,16 @@ function Home() {
                             'Unleash your poetic talent in our poetic competition, where words flow beautifully and creativity knows no bounds!'
                         }
                         number={"04"}
+                        setForm={setShowForm}
+                        setEventName={setEventName}
+                    />
+                    <EventCard
+                        eventImg={event5}
+                        eventName={'Tip Tap Toe'}
+                        eventDescrtiption={
+                            'Unleash your energy and showcase your moves in our dynamic dance competition, where rhythm and talent collide!'
+                        }
+                        number={"05"}
                         setForm={setShowForm}
                         setEventName={setEventName}
                     />

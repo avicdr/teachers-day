@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EventCard({ eventImg, eventName, eventDescrtiption, number, setForm, setEventName }) {
+function EventCard({ eventImg, eventName, eventDescrtiption, number, setForm, setEventName, know }) {
     return (
         <div class="card skew glow">
             <div class="content">
@@ -8,12 +8,12 @@ function EventCard({ eventImg, eventName, eventDescrtiption, number, setForm, se
                 <img src={eventImg} className='event-logo' />
                 <h3>{eventName}</h3>
                 <p>{eventDescrtiption}</p>
-                <button class="ui-btn" onClick={() => {
+                {!know?<button class="ui-btn" onClick={() => {
                     setEventName(eventName)
                     setForm(true)
                 }}>
                     Know More
-                </button>
+                </button>:<></>}
             </div>
         </div>
     )

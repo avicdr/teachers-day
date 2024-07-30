@@ -105,7 +105,7 @@ function UploadForm({ eventName }) {
                         <label className='mt-3'>Event Name: </label>
                         <select className='my-2 form-control' value={eventName}>
                             <option value={"Concurso De Pinture"}>Concurso De Pinture</option>
-                            <option value={"Certamen Athleticum"}>Certamen Athleticum</option>
+                            <option value={"Tip Tap Toe"}>Tip Tap Toe</option>
                             <option value={"गीत स्पर्धा"}>गीत स्पर्धा</option>
                             <option value={"काव्य स्पर्धा"}>काव्य स्पर्धा</option>
                         </select>
