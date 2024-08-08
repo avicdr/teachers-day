@@ -8,12 +8,13 @@ function EventCard({ eventImg, eventName, eventDescrtiption, number, setForm, se
                 <img src={eventImg} className='event-logo' />
                 <h3>{eventName}</h3>
                 <p>{eventDescrtiption}</p>
+                <a href='https://teachersdaysubmission.onrender.com'>
                 {!know?<button class="ui-btn" onClick={() => {
                     setEventName(eventName)
-                    setForm(true)
                 }}>
                     Know More
                 </button>:<></>}
+        </a>
             </div>
         </div>
     )
